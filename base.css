@@ -1,0 +1,158 @@
+:root {
+  --marca: #1F6F5C;
+  --marca-escura: #165647;
+  --marca-clara: #E8F3EF;
+  --primaria: #FF6B35;
+  --fundo: #FBFAF7;
+  --superficie: #FFFFFF;
+  --texto: #14201C;
+  --texto-suave: #5F6B66;
+  --sucesso: #06D6A0;
+  --atencao: #FFD166;
+  --perigo: #F0557A;
+  --primaria-texto: #B8481F;
+  --secundaria: #2EC4B6;
+  --perigo-botao: var(--perigo);
+  --borda: #E3E8E5;
+
+  --cat-roupas: #FF6B35;
+  --cat-calcados: #7B61FF;
+  --cat-material: #2EC4B6;
+  --cat-brinquedos: #EF476F;
+  --cat-livros: #118AB2;
+  --cat-casa: #06D6A0;
+
+  --fonte-logo: 'Fredoka', system-ui, sans-serif;
+  --fonte-titulo: 'Outfit', system-ui, sans-serif;
+  --fonte-corpo: 'Nunito', system-ui, sans-serif;
+
+  --raio-card: 24px;
+  --raio-botao: 29px;
+  --raio-campo: 16px;
+
+  --sombra: 0 6px 20px rgba(20, 32, 28, .08);
+  --sombra-suave: 0 2px 10px rgba(20, 32, 28, .06);
+  --sombra-marca: 0 6px 18px rgba(31, 111, 92, .28);
+  --sombra-laranja: 0 6px 18px rgba(255, 107, 53, .28);
+  --sombra-turquesa: 0 4px 16px rgba(46, 196, 182, .22);
+  --sombra-sucesso: 0 4px 16px rgba(6, 214, 160, .25);
+  --sombra-perigo: 0 4px 16px rgba(240, 85, 122, .22);
+
+  --respiro: 20px;
+  --altura-barra: 76px;
+  --espaco-barra: calc(var(--altura-barra) + 16px + 24px + env(safe-area-inset-bottom));
+  --toque-minimo: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-corpo);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+  padding-bottom: var(--espaco-barra);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+a {
+  color: var(--marca);
+}
+
+h1,
+h2,
+h3,
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+}
+
+h1 { font-size: clamp(30px, 9vw, 34px); }
+h2 { font-size: 24px; font-weight: 600; }
+h3 { font-size: 20px; font-weight: 600; }
+
+.numero-destaque {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+.texto-suave {
+  color: var(--texto-suave);
+}
+
+.escondido {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.conteudo {
+  padding: 0 var(--respiro);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+:focus-visible {
+  outline: 3px solid var(--marca);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
